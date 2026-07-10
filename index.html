@@ -10,19 +10,48 @@
 
     <div class="container">
         <h1>📝 Notes Management System</h1>
-
         <input type="text" id="title" placeholder="Enter Note Title">
 
-        <textarea id="note" placeholder="Write your note here..."></textarea>
+<select id="category">
+    <option value="DSA">DSA</option>
+    <option value="DBMS">DBMS</option>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <button onclick="addNote()">Add Note</button>
+<div class="container">
 
-        <input type="text" id="search" placeholder="Search Notes..." onkeyup="searchNotes()">
+    <h1>📝 Notes Management System</h1>
 
-        <div id="notesContainer"></div>
-    </div>
+    <input type="text" id="title" placeholder="Enter Note Title">
 
-    <script src="script.js"></script>
+    <select id="category">
+        <option value="DSA">DSA</option>
+        <option value="DBMS">DBMS</option>
+        <option value="OS">Operating System</option>
+        <option value="CN">Computer Networks</option>
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+        <option value="Others">Others</option>
+    </select>
+
+    <textarea id="note" placeholder="Write your note here..."></textarea>
+
+    <button onclick="addNote()">Add Note</button>
+
+    <input type="text" id="search" placeholder="Search Notes..." onkeyup="searchNotes()">
+
+    <div id="notesContainer"></div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
