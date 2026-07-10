@@ -4,25 +4,30 @@ displayNotes();
 
 // Add Note
 function addNote() {
+
     const title = document.getElementById("title").value.trim();
+    const category = document.getElementById("category").value;
     const note = document.getElementById("note").value.trim();
 
-    if (title === "" || note === "") {
-        alert("Please fill all fields!");
+    if(title==="" || note===""){
+        alert("Please fill all fields");
         return;
     }
 
     notes.push({
-        title: title,
-        note: note
+        title,
+        category,
+        note,
+        date:new Date().toLocaleString()
     });
 
-    localStorage.setItem("notes", JSON.stringify(notes));
+    localStorage.setItem("notes",JSON.stringify(notes));
 
-    document.getElementById("title").value = "";
-    document.getElementById("note").value = "";
+    document.getElementById("title").value="";
+    document.getElementById("note").value="";
 
     displayNotes();
+
 }
 
 // Display Notes
