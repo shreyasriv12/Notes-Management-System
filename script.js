@@ -29,7 +29,6 @@ function addNote() {
     displayNotes();
 
 }
-
 // Display Notes
 function displayNotes() {
     const container = document.getElementById("notesContainer");
@@ -39,7 +38,14 @@ function displayNotes() {
         container.innerHTML += `
             <div class="note">
                 <h3>${item.title}</h3>
+
+                <p><strong>Category:</strong> ${item.category}</p>
+
                 <p>${item.note}</p>
+
+                <small><strong>Created:</strong> ${item.date}</small>
+
+                <br><br>
 
                 <button class="edit" onclick="editNote(${index})">
                     Edit
@@ -63,9 +69,11 @@ function deleteNote(index) {
 // Edit Note
 function editNote(index) {
     document.getElementById("title").value = notes[index].title;
+    document.getElementById("category").value = notes[index].category;
     document.getElementById("note").value = notes[index].note;
 
     notes.splice(index, 1);
+
     localStorage.setItem("notes", JSON.stringify(notes));
 
     displayNotes();
@@ -73,30 +81,38 @@ function editNote(index) {
 
 // Search Notes
 function searchNotes() {
+
     const search = document.getElementById("search").value.toLowerCase();
 
     const container = document.getElementById("notesContainer");
     container.innerHTML = "";
 
     notes.forEach((item, index) => {
+
         if (
             item.title.toLowerCase().includes(search) ||
-            item.note.toLowerCase().includes(search)
+            item.note.toLowerCase().includes(search) ||
+            item.category.toLowerCase().includes(search)
         ) {
+
             container.innerHTML += `
                 <div class="note">
                     <h3>${item.title}</h3>
+
+                    <p><strong>Category:</strong> ${item.category}</p>
+
                     <p>${item.note}</p>
 
-                    <button class="edit" onclick="editNote(${index})">
-                        Edit
-                    </button>
+                    <small><strong>Created:</strong> ${item.date}</small>
 
-                    <button class="delete" onclick="deleteNote(${index})">
-                        Delete
-                    </button>
+                    <br><br>
+
+                    <button class="edit" onclick="editNote(${index})">Edit</button>
+
+                    <button class="delete" onclick="deleteNote(${index})">Delete</button>
                 </div>
             `;
         }
+
     });
 }
