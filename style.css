@@ -92,3 +92,34 @@ button:hover{
 .edit:hover{
     background:darkgreen;
 }
+.dark{
+    background:#1e1e1e;
+    color:white;
+}
+
+.dark .container{
+    background:#2d2d2d;
+}
+
+.dark input,
+.dark textarea,
+.dark select{
+    background:#444;
+    color:white;
+    border:1px solid #666;
+}
+
+.dark .note{
+    background:#3b3b3b;
+    border-left:5px solid #00bfff;
+}
+
+#themeBtn{
+    margin-bottom:15px;
+    background:#333;
+}
+
+.dark #themeBtn{
+    background:#f4f4f4;
+    color:black;
+}
