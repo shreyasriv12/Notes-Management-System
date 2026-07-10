@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+
+.chart-box{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+}
+
+canvas{
+    width:100% !important;
+    max-height:400px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    background:#007bff;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#0056b3;
+}
