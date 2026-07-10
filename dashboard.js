@@ -17,3 +17,22 @@ document.getElementById("categories").innerText = categorySet.size;
 const favoriteCount = notes.filter(note => note.favorite).length;
 
 document.getElementById("favorites").innerText = favoriteCount;
+// Check Login
+if (localStorage.getItem("isLoggedIn") !== "true") {
+
+    window.location.href = "login.html";
+
+}
+
+// Logout
+function logout() {
+
+    localStorage.removeItem("isLoggedIn");
+
+    localStorage.removeItem("userEmail");
+
+    alert("Logged Out Successfully");
+
+    window.location.href = "login.html";
+
+}
