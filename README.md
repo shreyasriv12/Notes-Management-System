@@ -131,7 +131,7 @@ No additional software or server setup is required.
 
 ## Author
 
-**Shreyas Srivastava**
+**Shreya Srivastava**
 
 Bachelor of Technology (Computer Science and Engineering)
 
